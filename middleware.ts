@@ -15,7 +15,6 @@ const allowAccessWithoutOtpToken = (path: string) => {
   return false;
 };
 export async function middleware(request: NextRequest) {
-  console.log("here");
   const sessionToken = request.cookies.get("session")?.value;
   const otpToken = request.cookies.get("otp_token")?.value;
 
