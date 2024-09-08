@@ -115,15 +115,15 @@ export default function auth() {
             </p>
           )}
           {showResendButton && (
-            <form action={resendotpaction}>
+            <form>
               <Button
-                onClick={() => {
+                onClick={async () => {
+                  await resendotpaction();
                   setOtpValue("");
                   clearErrors("otp_value");
                   setTimeLeft(10);
                   setShowResendButton(false);
                 }}
-                type="submit"
                 variant="link"
                 className="w-auto hover:underline"
               >

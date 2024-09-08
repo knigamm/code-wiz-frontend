@@ -7,6 +7,8 @@ import { useState, useRef, useEffect } from "react";
 
 import { sendMessageToChatbot } from "./actions/chat";
 
+import { Ellipsis } from "lucide-react";
+
 export default function Home() {
   const [messages, setMessages] = useState([
     {
@@ -15,10 +17,13 @@ export default function Home() {
     },
   ]);
   const [inputValue, setInputValue] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSearch = async () => {
-    if (!inputValue.trim()) return;
-
+    if (!inputValue.trim()) {
+      return;
+    }
+    setIsLoading(true);
     const newMessages = [...messages, { sender: "user", message: inputValue }];
     setMessages(newMessages);
 
@@ -30,6 +35,7 @@ export default function Home() {
       ...newMessages,
       { sender: "bot", message: answer.toString() },
     ]);
+    setIsLoading(false);
   };
 
   const messagesEndRef = useRef<HTMLDivElement | null>(null);
@@ -56,7 +62,10 @@ export default function Home() {
         {messages.map((message) => {
           return message.sender === "bot" ? (
             <>
-              <div className="flex w-[60%] flex-col gap-2 mx-auto">
+              <div
+                key={message.message}
+                className="flex w-[60%] flex-col gap-2 mx-auto"
+              >
                 <div className="text-sm font-medium text-muted-foreground">
                   Assistant
                 </div>
@@ -67,7 +76,10 @@ export default function Home() {
             </>
           ) : (
             <>
-              <div className="flex w-[60%] flex-col gap-2 mx-auto">
+              <div
+                key={message.message}
+                className="flex w-[60%] flex-col gap-2 mx-auto"
+              >
                 <div className="text-sm font-medium text-muted-foreground text-right">
                   You
                 </div>
@@ -79,6 +91,13 @@ export default function Home() {
           );
         })}
         <div ref={messagesEndRef} />
+        {isLoading && (
+          <div className="flex w-[60%] flex-col gap-2 mx-auto">
+            <div className="bg-primary text-primary-foreground rounded-lg px-4 py-3 max-w-[75%] self-start">
+              <Ellipsis color="white" className="h-6 w-6" />
+            </div>
+          </div>
+        )}
       </div>
       <div className="flex w-[60%] items-center space-x-2 mx-auto">
         <Input
