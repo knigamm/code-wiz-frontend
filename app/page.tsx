@@ -9,7 +9,6 @@ import {
   House,
 } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
-import Link from "next/link";
 import { Card } from "@/components/ui/card";
 
 import { sendMessageToChatbot } from "./actions/chat";
@@ -77,7 +76,7 @@ export default function Home() {
                     Hello, how can I assist you today?
                   </h2>
                   <p className="text-lg mt-2 text-muted-foreground">
-                    I'm an AI assistant created by Acme to help you with a
+                    I&apos;m an AI assistant created by Acme to help you with a
                     variety of tasks. Please let me know how I can be of
                     assistance.
                   </p>
@@ -97,7 +96,7 @@ export default function Home() {
                     <div>
                       <div className="text-left text-lg">Leave Policy</div>
                       <div className="text-left text-sm text-muted-foreground">
-                        Can you give me details about the company's leave
+                        Can you give me details about the company&apos;s leave
                         policy?
                       </div>
                     </div>
@@ -119,7 +118,7 @@ export default function Home() {
                         Remote Work Policy
                       </div>
                       <div className="text-left text-sm text-muted-foreground">
-                        Can you explain the company's remote work policy?
+                        Can you explain the company&apos;s remote work policy?
                       </div>
                     </div>
                   </Card>
@@ -138,7 +137,7 @@ export default function Home() {
                     <div>
                       <div className="text-left text-lg">Promotion Policy</div>
                       <div className="text-left text-sm text-muted-foreground">
-                        What is the company's employee promotion policy?
+                        What is the company&apos;s employee promotion policy?
                       </div>
                     </div>
                   </Card>

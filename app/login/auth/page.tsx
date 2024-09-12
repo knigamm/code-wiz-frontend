@@ -1,4 +1,5 @@
 "use client";
+
 import { useState, useEffect } from "react";
 import {
   InputOTP,
@@ -37,7 +38,7 @@ import { useForm } from "react-hook-form";
 //   }
 // };
 
-export default function auth() {
+export default function Auth() {
   const {
     handleSubmit,
     register,

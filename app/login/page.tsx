@@ -19,7 +19,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { loginform } from "../lib/utils";
 
 import { loginaction } from "../actions/login";
-import { Loader2Icon, LoaderPinwheel } from "lucide-react";
+import { Loader2Icon } from "lucide-react";
 
 type loginFormType = z.infer<typeof loginform>;
 
