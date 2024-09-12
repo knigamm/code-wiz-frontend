@@ -3,14 +3,28 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: hsl(0, 0%, 94%);    /*#f0f0f0*/
+  --foreground: 	hsl(0, 0%, 7%);   /*#11111*/
+  --card-bg-color: hsl(0, 0%, 91%); /*#e9e9e9*/
+  --card-hover: hsl(0, 0%, 91%);
+  --card-text-color: #000000;
+  --submit-bg-color: hsl(0, 0%, 7%);
+  --icon-hover-bg:hsl(0, 0%, 7%);
+  --icon-hover-text: hsl(0, 0%, 94%);
+  --primary: hsl(0, 0%, 7%);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: 	hsl(0, 0%, 7%);   /*#11111*/
     --foreground: #ededed;
+    --card-bg-color: 	hsl(0, 0%, 13%);
+    --card-hover: hsl(0, 0%, 14%);
+    --card-text-color: #f0f0f0;
+    --submit-bg-color: hsl(0, 0%, 13%);
+    --icon-hover-bg:hsl(0, 0%, 14%);
+    --icon-hover-text: hsl(0, 0%, 94%);
+    --primary: hsl(0, 0%, 7%); 
   }
 }
 
@@ -31,11 +45,10 @@ body {
     --background: 0 0% 100%;
     --foreground: 0 0% 3.9%;
     --card: 0 0% 100%;
+    
     --card-foreground: 0 0% 3.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 3.9%;
-    --primary: 0 0% 9%;
-    --primary-foreground: 0 0% 98%;
     --secondary: 0 0% 96.1%;
     --secondary-foreground: 0 0% 9%;
     --muted: 0 0% 96.1%;
@@ -55,14 +68,12 @@ body {
     --radius: 0.5rem;
   }
   .dark {
-    --background: 0 0% 3.9%;
+    --background: 200 50% 3.9%;
     --foreground: 0 0% 98%;
     --card: 0 0% 3.9%;
     --card-foreground: 0 0% 98%;
     --popover: 0 0% 3.9%;
     --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
     --secondary: 0 0% 14.9%;
     --secondary-foreground: 0 0% 98%;
     --muted: 0 0% 14.9%;

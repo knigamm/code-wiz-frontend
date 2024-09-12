@@ -10,18 +10,34 @@ const config: Config = {
   theme: {
   	extend: {
   		colors: {
-  			background: 'hsl(var(--background))',
-  			foreground: 'hsl(var(--foreground))',
+  			background: 'var(--background)',
+  			foreground: 'var(--foreground)',
+			cardhover: {
+				DEFAULT: 'var(--card-hover)',
+				foreground: 'hsl(var(--card-foreground))'
+			},
   			card: {
-  				DEFAULT: 'hsl(var(--card))',
+  				DEFAULT: 'var(--card-bg-color)',
   				foreground: 'hsl(var(--card-foreground))'
   			},
+			iconhbg: {
+				DEFAULT: 'var(--icon-hover-bg)',
+				foreground: 'hsl(var(--card-foreground))'
+			},
+			iconhtext: {
+				DEFAULT: 'var(--icon-hover-text)',
+				foreground: 'hsl(var(--card-foreground))'
+			},
+			submit: {
+				DEFAULT: 'var(--submit-bg-color)',
+				foreground: 'hsl(var(--card-foreground))'
+			},
   			popover: {
   				DEFAULT: 'hsl(var(--popover))',
   				foreground: 'hsl(var(--popover-foreground))'
   			},
   			primary: {
-  				DEFAULT: 'hsl(var(--primary))',
+  				DEFAULT: 'var(--primary)',
   				foreground: 'hsl(var(--primary-foreground))'
   			},
   			secondary: {

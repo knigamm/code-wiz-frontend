@@ -41,7 +41,7 @@ const LoginForm = () => {
     <>
       <div className="flex min-h-screen items-center justify-center bg-background px-4">
         <form onSubmit={handleSubmit(processForm)}>
-          <Card className="w-full max-w-md">
+          <Card className="w-full max-w-md bg-card">
             <CardHeader>
               <CardTitle className="text-2xl">Welcome back</CardTitle>
               <CardDescription>
@@ -83,7 +83,7 @@ const LoginForm = () => {
               <Button
                 disabled={isSubmitting}
                 type="submit"
-                className="w-full flex gap-4"
+                className="w-full flex gap-4 text-white"
               >
                 {isSubmitting && (
                   <Loader2Icon className="animate-spin h-5 w-5" />

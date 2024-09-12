@@ -72,7 +72,7 @@ export default function auth() {
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
-      <Card className="w-full max-w-md">
+      <Card className="w-full max-w-md bg-card">
         <CardHeader>
           <CardTitle className="text-2xl">
             Enter your One-Time Password
@@ -125,7 +125,7 @@ export default function auth() {
                   setShowResendButton(false);
                 }}
                 variant="link"
-                className="w-auto hover:underline"
+                className="w-auto text-foreground hover:underline"
               >
                 Resend OTP
               </Button>
@@ -137,7 +137,7 @@ export default function auth() {
             <Button
               disabled={isSubmitting}
               type="submit"
-              className="w-full flex gap-4"
+              className="w-full flex gap-4 text-white"
             >
               {isSubmitting && <Loader2Icon className="animate-spin h-5 w-5" />}
               Verify OTP
