@@ -39,9 +39,9 @@ const LoginForm = () => {
 
   return (
     <>
-      <div className="flex min-h-screen items-center justify-center bg-background px-4">
+      <div className="flex min-h-screen items-center justify-center bg-white px-4">
         <form onSubmit={handleSubmit(processForm)}>
-          <Card className="w-full max-w-md bg-card">
+          <Card className="w-full max-w-md bg-white">
             <CardHeader>
               <CardTitle className="text-2xl">Welcome back</CardTitle>
               <CardDescription>

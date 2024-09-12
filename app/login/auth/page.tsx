@@ -71,8 +71,8 @@ export default function auth() {
   };
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background px-4">
-      <Card className="w-full max-w-md bg-card">
+    <div className="flex min-h-screen items-center justify-center bg-white px-4">
+      <Card className="w-full max-w-md bg-white">
         <CardHeader>
           <CardTitle className="text-2xl">
             Enter your One-Time Password
